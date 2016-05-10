@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head tal:define="head load: head.pt" metal:use-macro="head"></head>
+    <body>
+        <div tal:define="navBar load: navBar.pt" metal:use-macro="navBar"></div>
+        <div id="bottom">
+            <div class="bottom" align="center">
+                <table class="table-striped table-bordered table-hover" style="width: 50%; margin: 0 auto;">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>fooditemid</th>
+                            <th>nutritiontypeid</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr tal:repeat="nutrition nutritionlist">
+                            <td style="text-align: center">${nutrition.id}</td>
+                            <td style="text-align: center">${nutrition.fooditemsid}</td>
+                            <td style="text-align: center">${nutrition.nutritiontypeid}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
